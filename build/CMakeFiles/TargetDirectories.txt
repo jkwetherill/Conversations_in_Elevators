@@ -1,0 +1,3 @@
+/home/julia/Documents/UdacityProjects/CppND-Conversations-in-Elevators/build/CMakeFiles/CppND-Conversations-in-Elevators.dir
+/home/julia/Documents/UdacityProjects/CppND-Conversations-in-Elevators/build/CMakeFiles/edit_cache.dir
+/home/julia/Documents/UdacityProjects/CppND-Conversations-in-Elevators/build/CMakeFiles/rebuild_cache.dir
