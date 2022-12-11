@@ -1,8 +1,21 @@
 #include "Conversation.h"
+//#include "Question.h"
+//#include "Answer.h"
+//#include "MessageQueue.h"
 #include <thread>
 #include <future>
 #include <vector>
 
+
+Conversation::Conversation()
+{
+
+}
+
+Conversation::~Conversation()
+{
+    
+}
 
 Conversation::Conversation(std::string logFile):_logFile(logFile)
 {
@@ -23,6 +36,7 @@ void Conversation::run()
 
 void Conversation::receiveQuestions()
 {
+    
     while (1)
     {
         Question newQuestion = questionQueue.receive(); //wait for somebody to ask a question
@@ -36,6 +50,8 @@ void Conversation::receiveQuestions()
 
 void Conversation::receiveAnswers()
 {
+    
+
     while (1)
     {
         Answer newAnswer = answerQueue.receive(); // wait for somebody to provide an answer
@@ -57,4 +73,5 @@ void Conversation::receiveAnswers()
 
         _mutex.unlock();
     }
+    
 }

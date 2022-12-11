@@ -1,13 +1,27 @@
 #include "Question.h"
 #include <random>
 
-Question::Question(const std::string &speaker)
+
+
+Question::Question()
+{
+
+}
+
+void Question::ask(const std::string &speaker)
 {
   _speaker = speaker;
-  _ID = _IDCounter++;
+  //_ID = _IDCounter++;
 
   generateDialog();
 }
+
+
+Question::~Question()
+{
+
+}
+
 
 void Question::generateDialog()
 {

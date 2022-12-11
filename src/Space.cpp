@@ -1,17 +1,19 @@
 #include "Space.h"
+#include "Person.h"
 
 Space::Space()
 {
     conversation.reset(new Conversation);
 }
 
+Space::~Space()
+{
+    
+}
+
 Space::Space(const std::string& logFile)
 {
     conversation.reset(new Conversation(logFile));
-}
-
-Space::~Space()
-{
 }
 
 

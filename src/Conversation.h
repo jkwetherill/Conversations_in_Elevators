@@ -7,12 +7,24 @@
 #include "Question.h"
 #include "MessageQueue.h"
 
+
+//class Question;
+//class Answer;
+
+//template <class T>
+//class MessageQueue;
+//class MessageQueue<Question>;
+//class MessageQueue<Answer>;
+
 class Conversation
 {
   public:
   Conversation();
   Conversation(std::string logFile);
   ~Conversation();
+
+  //friend class MessageQueue<Question>;
+  //friend class MessageQueue<Answer>;
 
   void receiveQuestions();
   void receiveAnswers();

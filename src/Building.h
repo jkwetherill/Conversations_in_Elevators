@@ -10,14 +10,18 @@ class Building
 {
 private:
     /* data */
+    
+
 public:
+
+    Building();
+    ~Building();
 
     Floor Floors[NFLOORS];
 
     bool readInPeople(const std::string& inputDir, std::string& errorMsg);
 
-    Building();
-    ~Building();
+    void launchElevators();
 };
 
 #endif

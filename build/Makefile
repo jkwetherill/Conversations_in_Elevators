@@ -129,6 +129,246 @@ CppND-Conversations-in-Elevators/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CppND-Conversations-in-Elevators.dir/build.make CMakeFiles/CppND-Conversations-in-Elevators.dir/build
 .PHONY : CppND-Conversations-in-Elevators/fast
 
+src/Answer.o: src/Answer.cpp.o
+.PHONY : src/Answer.o
+
+# target to build an object file
+src/Answer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CppND-Conversations-in-Elevators.dir/build.make CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Answer.cpp.o
+.PHONY : src/Answer.cpp.o
+
+src/Answer.i: src/Answer.cpp.i
+.PHONY : src/Answer.i
+
+# target to preprocess a source file
+src/Answer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CppND-Conversations-in-Elevators.dir/build.make CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Answer.cpp.i
+.PHONY : src/Answer.cpp.i
+
+src/Answer.s: src/Answer.cpp.s
+.PHONY : src/Answer.s
+
+# target to generate assembly for a file
+src/Answer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CppND-Conversations-in-Elevators.dir/build.make CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Answer.cpp.s
+.PHONY : src/Answer.cpp.s
+
+src/Building.o: src/Building.cpp.o
+.PHONY : src/Building.o
+
+# target to build an object file
+src/Building.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CppND-Conversations-in-Elevators.dir/build.make CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Building.cpp.o
+.PHONY : src/Building.cpp.o
+
+src/Building.i: src/Building.cpp.i
+.PHONY : src/Building.i
+
+# target to preprocess a source file
+src/Building.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CppND-Conversations-in-Elevators.dir/build.make CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Building.cpp.i
+.PHONY : src/Building.cpp.i
+
+src/Building.s: src/Building.cpp.s
+.PHONY : src/Building.s
+
+# target to generate assembly for a file
+src/Building.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CppND-Conversations-in-Elevators.dir/build.make CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Building.cpp.s
+.PHONY : src/Building.cpp.s
+
+src/Conversation.o: src/Conversation.cpp.o
+.PHONY : src/Conversation.o
+
+# target to build an object file
+src/Conversation.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CppND-Conversations-in-Elevators.dir/build.make CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Conversation.cpp.o
+.PHONY : src/Conversation.cpp.o
+
+src/Conversation.i: src/Conversation.cpp.i
+.PHONY : src/Conversation.i
+
+# target to preprocess a source file
+src/Conversation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CppND-Conversations-in-Elevators.dir/build.make CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Conversation.cpp.i
+.PHONY : src/Conversation.cpp.i
+
+src/Conversation.s: src/Conversation.cpp.s
+.PHONY : src/Conversation.s
+
+# target to generate assembly for a file
+src/Conversation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CppND-Conversations-in-Elevators.dir/build.make CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Conversation.cpp.s
+.PHONY : src/Conversation.cpp.s
+
+src/Dialog.o: src/Dialog.cpp.o
+.PHONY : src/Dialog.o
+
+# target to build an object file
+src/Dialog.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CppND-Conversations-in-Elevators.dir/build.make CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Dialog.cpp.o
+.PHONY : src/Dialog.cpp.o
+
+src/Dialog.i: src/Dialog.cpp.i
+.PHONY : src/Dialog.i
+
+# target to preprocess a source file
+src/Dialog.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CppND-Conversations-in-Elevators.dir/build.make CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Dialog.cpp.i
+.PHONY : src/Dialog.cpp.i
+
+src/Dialog.s: src/Dialog.cpp.s
+.PHONY : src/Dialog.s
+
+# target to generate assembly for a file
+src/Dialog.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CppND-Conversations-in-Elevators.dir/build.make CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Dialog.cpp.s
+.PHONY : src/Dialog.cpp.s
+
+src/Elevator.o: src/Elevator.cpp.o
+.PHONY : src/Elevator.o
+
+# target to build an object file
+src/Elevator.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CppND-Conversations-in-Elevators.dir/build.make CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Elevator.cpp.o
+.PHONY : src/Elevator.cpp.o
+
+src/Elevator.i: src/Elevator.cpp.i
+.PHONY : src/Elevator.i
+
+# target to preprocess a source file
+src/Elevator.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CppND-Conversations-in-Elevators.dir/build.make CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Elevator.cpp.i
+.PHONY : src/Elevator.cpp.i
+
+src/Elevator.s: src/Elevator.cpp.s
+.PHONY : src/Elevator.s
+
+# target to generate assembly for a file
+src/Elevator.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CppND-Conversations-in-Elevators.dir/build.make CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Elevator.cpp.s
+.PHONY : src/Elevator.cpp.s
+
+src/Floor.o: src/Floor.cpp.o
+.PHONY : src/Floor.o
+
+# target to build an object file
+src/Floor.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CppND-Conversations-in-Elevators.dir/build.make CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Floor.cpp.o
+.PHONY : src/Floor.cpp.o
+
+src/Floor.i: src/Floor.cpp.i
+.PHONY : src/Floor.i
+
+# target to preprocess a source file
+src/Floor.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CppND-Conversations-in-Elevators.dir/build.make CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Floor.cpp.i
+.PHONY : src/Floor.cpp.i
+
+src/Floor.s: src/Floor.cpp.s
+.PHONY : src/Floor.s
+
+# target to generate assembly for a file
+src/Floor.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CppND-Conversations-in-Elevators.dir/build.make CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Floor.cpp.s
+.PHONY : src/Floor.cpp.s
+
+src/MessageQueue.o: src/MessageQueue.cpp.o
+.PHONY : src/MessageQueue.o
+
+# target to build an object file
+src/MessageQueue.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CppND-Conversations-in-Elevators.dir/build.make CMakeFiles/CppND-Conversations-in-Elevators.dir/src/MessageQueue.cpp.o
+.PHONY : src/MessageQueue.cpp.o
+
+src/MessageQueue.i: src/MessageQueue.cpp.i
+.PHONY : src/MessageQueue.i
+
+# target to preprocess a source file
+src/MessageQueue.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CppND-Conversations-in-Elevators.dir/build.make CMakeFiles/CppND-Conversations-in-Elevators.dir/src/MessageQueue.cpp.i
+.PHONY : src/MessageQueue.cpp.i
+
+src/MessageQueue.s: src/MessageQueue.cpp.s
+.PHONY : src/MessageQueue.s
+
+# target to generate assembly for a file
+src/MessageQueue.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CppND-Conversations-in-Elevators.dir/build.make CMakeFiles/CppND-Conversations-in-Elevators.dir/src/MessageQueue.cpp.s
+.PHONY : src/MessageQueue.cpp.s
+
+src/Person.o: src/Person.cpp.o
+.PHONY : src/Person.o
+
+# target to build an object file
+src/Person.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CppND-Conversations-in-Elevators.dir/build.make CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Person.cpp.o
+.PHONY : src/Person.cpp.o
+
+src/Person.i: src/Person.cpp.i
+.PHONY : src/Person.i
+
+# target to preprocess a source file
+src/Person.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CppND-Conversations-in-Elevators.dir/build.make CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Person.cpp.i
+.PHONY : src/Person.cpp.i
+
+src/Person.s: src/Person.cpp.s
+.PHONY : src/Person.s
+
+# target to generate assembly for a file
+src/Person.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CppND-Conversations-in-Elevators.dir/build.make CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Person.cpp.s
+.PHONY : src/Person.cpp.s
+
+src/Question.o: src/Question.cpp.o
+.PHONY : src/Question.o
+
+# target to build an object file
+src/Question.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CppND-Conversations-in-Elevators.dir/build.make CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Question.cpp.o
+.PHONY : src/Question.cpp.o
+
+src/Question.i: src/Question.cpp.i
+.PHONY : src/Question.i
+
+# target to preprocess a source file
+src/Question.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CppND-Conversations-in-Elevators.dir/build.make CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Question.cpp.i
+.PHONY : src/Question.cpp.i
+
+src/Question.s: src/Question.cpp.s
+.PHONY : src/Question.s
+
+# target to generate assembly for a file
+src/Question.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CppND-Conversations-in-Elevators.dir/build.make CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Question.cpp.s
+.PHONY : src/Question.cpp.s
+
+src/Space.o: src/Space.cpp.o
+.PHONY : src/Space.o
+
+# target to build an object file
+src/Space.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CppND-Conversations-in-Elevators.dir/build.make CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Space.cpp.o
+.PHONY : src/Space.cpp.o
+
+src/Space.i: src/Space.cpp.i
+.PHONY : src/Space.i
+
+# target to preprocess a source file
+src/Space.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CppND-Conversations-in-Elevators.dir/build.make CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Space.cpp.i
+.PHONY : src/Space.cpp.i
+
+src/Space.s: src/Space.cpp.s
+.PHONY : src/Space.s
+
+# target to generate assembly for a file
+src/Space.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CppND-Conversations-in-Elevators.dir/build.make CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Space.cpp.s
+.PHONY : src/Space.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -162,6 +402,36 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... CppND-Conversations-in-Elevators"
+	@echo "... src/Answer.o"
+	@echo "... src/Answer.i"
+	@echo "... src/Answer.s"
+	@echo "... src/Building.o"
+	@echo "... src/Building.i"
+	@echo "... src/Building.s"
+	@echo "... src/Conversation.o"
+	@echo "... src/Conversation.i"
+	@echo "... src/Conversation.s"
+	@echo "... src/Dialog.o"
+	@echo "... src/Dialog.i"
+	@echo "... src/Dialog.s"
+	@echo "... src/Elevator.o"
+	@echo "... src/Elevator.i"
+	@echo "... src/Elevator.s"
+	@echo "... src/Floor.o"
+	@echo "... src/Floor.i"
+	@echo "... src/Floor.s"
+	@echo "... src/MessageQueue.o"
+	@echo "... src/MessageQueue.i"
+	@echo "... src/MessageQueue.s"
+	@echo "... src/Person.o"
+	@echo "... src/Person.i"
+	@echo "... src/Person.s"
+	@echo "... src/Question.o"
+	@echo "... src/Question.i"
+	@echo "... src/Question.s"
+	@echo "... src/Space.o"
+	@echo "... src/Space.i"
+	@echo "... src/Space.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

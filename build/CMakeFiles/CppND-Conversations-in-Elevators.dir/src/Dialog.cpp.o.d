@@ -1,6 +1,8 @@
-CMakeFiles/CppND-Conversations-in-Elevators.dir/src/main.cpp.o: \
- /home/julia/Documents/UdacityProjects/CppND-Conversations-in-Elevators/src/main.cpp \
- /usr/include/stdc-predef.h /usr/include/c++/11/string \
+CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Dialog.cpp.o: \
+ /home/julia/Documents/UdacityProjects/CppND-Conversations-in-Elevators/src/Dialog.cpp \
+ /usr/include/stdc-predef.h \
+ /home/julia/Documents/UdacityProjects/CppND-Conversations-in-Elevators/src/Dialog.h \
+ /usr/include/c++/11/string \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -127,53 +129,4 @@ CMakeFiles/CppND-Conversations-in-Elevators.dir/src/main.cpp.o: \
  /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
  /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
  /usr/include/c++/11/bits/charconv.h \
- /usr/include/c++/11/bits/basic_string.tcc \
- /home/julia/Documents/UdacityProjects/CppND-Conversations-in-Elevators/src/Constants.h \
- /home/julia/Documents/UdacityProjects/CppND-Conversations-in-Elevators/src/Building.h \
- /home/julia/Documents/UdacityProjects/CppND-Conversations-in-Elevators/src/Floor.h \
- /usr/include/c++/11/memory /usr/include/c++/11/bits/stl_uninitialized.h \
- /usr/include/c++/11/bits/stl_tempbuf.h \
- /usr/include/c++/11/bits/stl_raw_storage_iter.h \
- /usr/include/c++/11/bits/align.h /usr/include/c++/11/bit \
- /usr/include/c++/11/bits/uses_allocator.h \
- /usr/include/c++/11/bits/unique_ptr.h /usr/include/c++/11/utility \
- /usr/include/c++/11/bits/stl_relops.h /usr/include/c++/11/tuple \
- /usr/include/c++/11/array /usr/include/c++/11/bits/invoke.h \
- /usr/include/c++/11/bits/shared_ptr.h \
- /usr/include/c++/11/bits/shared_ptr_base.h /usr/include/c++/11/typeinfo \
- /usr/include/c++/11/bits/allocated_ptr.h \
- /usr/include/c++/11/bits/refwrap.h \
- /usr/include/c++/11/ext/aligned_buffer.h \
- /usr/include/c++/11/ext/concurrence.h /usr/include/c++/11/exception \
- /usr/include/c++/11/bits/exception_ptr.h \
- /usr/include/c++/11/bits/cxxabi_init_exception.h \
- /usr/include/c++/11/bits/nested_exception.h \
- /usr/include/c++/11/bits/shared_ptr_atomic.h \
- /usr/include/c++/11/bits/atomic_base.h \
- /usr/include/c++/11/bits/atomic_lockfree_defines.h \
- /usr/include/c++/11/backward/auto_ptr.h \
- /usr/include/c++/11/pstl/glue_memory_defs.h \
- /usr/include/c++/11/pstl/execution_defs.h \
- /home/julia/Documents/UdacityProjects/CppND-Conversations-in-Elevators/src/Elevator.h \
- /home/julia/Documents/UdacityProjects/CppND-Conversations-in-Elevators/src/Space.h \
- /home/julia/Documents/UdacityProjects/CppND-Conversations-in-Elevators/src/Conversation.h \
- /usr/include/c++/11/mutex /usr/include/c++/11/chrono \
- /usr/include/c++/11/ratio /usr/include/c++/11/limits \
- /usr/include/c++/11/ctime /usr/include/c++/11/bits/parse_numbers.h \
- /usr/include/c++/11/system_error \
- /usr/include/x86_64-linux-gnu/c++/11/bits/error_constants.h \
- /usr/include/c++/11/stdexcept /usr/include/c++/11/bits/std_mutex.h \
- /usr/include/c++/11/bits/unique_lock.h /usr/include/c++/11/vector \
- /usr/include/c++/11/bits/stl_vector.h \
- /usr/include/c++/11/bits/stl_bvector.h \
- /usr/include/c++/11/bits/vector.tcc \
- /home/julia/Documents/UdacityProjects/CppND-Conversations-in-Elevators/src/Answer.h \
- /home/julia/Documents/UdacityProjects/CppND-Conversations-in-Elevators/src/Dialog.h \
- /home/julia/Documents/UdacityProjects/CppND-Conversations-in-Elevators/src/Question.h \
- /home/julia/Documents/UdacityProjects/CppND-Conversations-in-Elevators/src/MessageQueue.h \
- /usr/include/c++/11/deque /usr/include/c++/11/bits/stl_deque.h \
- /usr/include/c++/11/bits/deque.tcc \
- /usr/include/c++/11/condition_variable /usr/include/c++/11/future \
- /usr/include/c++/11/atomic /usr/include/c++/11/bits/atomic_futex.h \
- /usr/include/c++/11/bits/std_function.h \
- /usr/include/c++/11/bits/std_thread.h
+ /usr/include/c++/11/bits/basic_string.tcc

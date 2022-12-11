@@ -1,5 +1,8 @@
 #include <string>
+#include "Constants.h"
+#include "Building.h"
 
+//#include "Person.h" 
 
 
 
@@ -21,6 +24,18 @@ int main(int argc, char *argv[])
     */
 
     
+   Building building;
+
+   //.launchElevators();
+
+   //Elevator e;
+
+   //Question q;
+
+   //Answer a;
+
+   ///Person p;
+
 
 
 

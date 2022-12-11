@@ -5,7 +5,7 @@
 
 
 
-typedef enum Question_Type
+enum Question_Type
 {
   WHO,
   WHAT,
@@ -22,16 +22,19 @@ class Dialog
 {
     protected:
     static unsigned int _IDCounter;
-    virtual void Dialog::generateDialog() = 0;
+    virtual void generateDialog() = 0;
 
-    public:
+    protected:
     Dialog();
-    ~Dialog();
+    Dialog(std::string& speaker, unsigned int ID);
+    virtual ~Dialog() = 0;
 
     Dialog &operator=(const Dialog &dialog);
     Dialog(const Dialog &dialog);
     Dialog(Dialog &&dialog);
     Dialog &operator=(Dialog &&dialog);
+
+    public:
 
     const std::string& getSpeaker();
     const unsigned int& getID();
@@ -45,15 +48,6 @@ class Dialog
     unsigned int _ID;
     Question_Type _questionType;
     std::string _sentence = "";
-
-};
-
-
-
-
-
-class Answer : public Dialog
-{
 
 };
 

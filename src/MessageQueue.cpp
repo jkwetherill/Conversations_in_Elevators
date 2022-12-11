@@ -1,7 +1,10 @@
+
+/*
+
 #include <future>
 #include "MessageQueue.h"
 
-/* Implementation of class "MessageQueue" */
+/* Implementation of class "MessageQueue" 
 
 
 template <typename T>
@@ -34,7 +37,7 @@ void MessageQueue<T>::send(T &&msg)
     _cond.notify_one();
 }
 
-
+*/
 
 
 

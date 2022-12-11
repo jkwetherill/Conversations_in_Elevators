@@ -69,10 +69,150 @@ include CMakeFiles/CppND-Conversations-in-Elevators.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/CppND-Conversations-in-Elevators.dir/flags.make
 
+CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Answer.cpp.o: CMakeFiles/CppND-Conversations-in-Elevators.dir/flags.make
+CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Answer.cpp.o: ../src/Answer.cpp
+CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Answer.cpp.o: CMakeFiles/CppND-Conversations-in-Elevators.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/julia/Documents/UdacityProjects/CppND-Conversations-in-Elevators/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Answer.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Answer.cpp.o -MF CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Answer.cpp.o.d -o CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Answer.cpp.o -c /home/julia/Documents/UdacityProjects/CppND-Conversations-in-Elevators/src/Answer.cpp
+
+CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Answer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Answer.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/julia/Documents/UdacityProjects/CppND-Conversations-in-Elevators/src/Answer.cpp > CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Answer.cpp.i
+
+CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Answer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Answer.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/julia/Documents/UdacityProjects/CppND-Conversations-in-Elevators/src/Answer.cpp -o CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Answer.cpp.s
+
+CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Building.cpp.o: CMakeFiles/CppND-Conversations-in-Elevators.dir/flags.make
+CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Building.cpp.o: ../src/Building.cpp
+CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Building.cpp.o: CMakeFiles/CppND-Conversations-in-Elevators.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/julia/Documents/UdacityProjects/CppND-Conversations-in-Elevators/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Building.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Building.cpp.o -MF CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Building.cpp.o.d -o CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Building.cpp.o -c /home/julia/Documents/UdacityProjects/CppND-Conversations-in-Elevators/src/Building.cpp
+
+CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Building.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Building.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/julia/Documents/UdacityProjects/CppND-Conversations-in-Elevators/src/Building.cpp > CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Building.cpp.i
+
+CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Building.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Building.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/julia/Documents/UdacityProjects/CppND-Conversations-in-Elevators/src/Building.cpp -o CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Building.cpp.s
+
+CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Conversation.cpp.o: CMakeFiles/CppND-Conversations-in-Elevators.dir/flags.make
+CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Conversation.cpp.o: ../src/Conversation.cpp
+CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Conversation.cpp.o: CMakeFiles/CppND-Conversations-in-Elevators.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/julia/Documents/UdacityProjects/CppND-Conversations-in-Elevators/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Conversation.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Conversation.cpp.o -MF CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Conversation.cpp.o.d -o CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Conversation.cpp.o -c /home/julia/Documents/UdacityProjects/CppND-Conversations-in-Elevators/src/Conversation.cpp
+
+CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Conversation.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Conversation.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/julia/Documents/UdacityProjects/CppND-Conversations-in-Elevators/src/Conversation.cpp > CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Conversation.cpp.i
+
+CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Conversation.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Conversation.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/julia/Documents/UdacityProjects/CppND-Conversations-in-Elevators/src/Conversation.cpp -o CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Conversation.cpp.s
+
+CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Dialog.cpp.o: CMakeFiles/CppND-Conversations-in-Elevators.dir/flags.make
+CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Dialog.cpp.o: ../src/Dialog.cpp
+CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Dialog.cpp.o: CMakeFiles/CppND-Conversations-in-Elevators.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/julia/Documents/UdacityProjects/CppND-Conversations-in-Elevators/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Dialog.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Dialog.cpp.o -MF CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Dialog.cpp.o.d -o CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Dialog.cpp.o -c /home/julia/Documents/UdacityProjects/CppND-Conversations-in-Elevators/src/Dialog.cpp
+
+CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Dialog.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Dialog.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/julia/Documents/UdacityProjects/CppND-Conversations-in-Elevators/src/Dialog.cpp > CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Dialog.cpp.i
+
+CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Dialog.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Dialog.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/julia/Documents/UdacityProjects/CppND-Conversations-in-Elevators/src/Dialog.cpp -o CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Dialog.cpp.s
+
+CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Elevator.cpp.o: CMakeFiles/CppND-Conversations-in-Elevators.dir/flags.make
+CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Elevator.cpp.o: ../src/Elevator.cpp
+CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Elevator.cpp.o: CMakeFiles/CppND-Conversations-in-Elevators.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/julia/Documents/UdacityProjects/CppND-Conversations-in-Elevators/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Elevator.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Elevator.cpp.o -MF CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Elevator.cpp.o.d -o CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Elevator.cpp.o -c /home/julia/Documents/UdacityProjects/CppND-Conversations-in-Elevators/src/Elevator.cpp
+
+CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Elevator.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Elevator.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/julia/Documents/UdacityProjects/CppND-Conversations-in-Elevators/src/Elevator.cpp > CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Elevator.cpp.i
+
+CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Elevator.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Elevator.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/julia/Documents/UdacityProjects/CppND-Conversations-in-Elevators/src/Elevator.cpp -o CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Elevator.cpp.s
+
+CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Floor.cpp.o: CMakeFiles/CppND-Conversations-in-Elevators.dir/flags.make
+CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Floor.cpp.o: ../src/Floor.cpp
+CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Floor.cpp.o: CMakeFiles/CppND-Conversations-in-Elevators.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/julia/Documents/UdacityProjects/CppND-Conversations-in-Elevators/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Floor.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Floor.cpp.o -MF CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Floor.cpp.o.d -o CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Floor.cpp.o -c /home/julia/Documents/UdacityProjects/CppND-Conversations-in-Elevators/src/Floor.cpp
+
+CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Floor.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Floor.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/julia/Documents/UdacityProjects/CppND-Conversations-in-Elevators/src/Floor.cpp > CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Floor.cpp.i
+
+CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Floor.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Floor.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/julia/Documents/UdacityProjects/CppND-Conversations-in-Elevators/src/Floor.cpp -o CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Floor.cpp.s
+
+CMakeFiles/CppND-Conversations-in-Elevators.dir/src/MessageQueue.cpp.o: CMakeFiles/CppND-Conversations-in-Elevators.dir/flags.make
+CMakeFiles/CppND-Conversations-in-Elevators.dir/src/MessageQueue.cpp.o: ../src/MessageQueue.cpp
+CMakeFiles/CppND-Conversations-in-Elevators.dir/src/MessageQueue.cpp.o: CMakeFiles/CppND-Conversations-in-Elevators.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/julia/Documents/UdacityProjects/CppND-Conversations-in-Elevators/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/CppND-Conversations-in-Elevators.dir/src/MessageQueue.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CppND-Conversations-in-Elevators.dir/src/MessageQueue.cpp.o -MF CMakeFiles/CppND-Conversations-in-Elevators.dir/src/MessageQueue.cpp.o.d -o CMakeFiles/CppND-Conversations-in-Elevators.dir/src/MessageQueue.cpp.o -c /home/julia/Documents/UdacityProjects/CppND-Conversations-in-Elevators/src/MessageQueue.cpp
+
+CMakeFiles/CppND-Conversations-in-Elevators.dir/src/MessageQueue.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CppND-Conversations-in-Elevators.dir/src/MessageQueue.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/julia/Documents/UdacityProjects/CppND-Conversations-in-Elevators/src/MessageQueue.cpp > CMakeFiles/CppND-Conversations-in-Elevators.dir/src/MessageQueue.cpp.i
+
+CMakeFiles/CppND-Conversations-in-Elevators.dir/src/MessageQueue.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CppND-Conversations-in-Elevators.dir/src/MessageQueue.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/julia/Documents/UdacityProjects/CppND-Conversations-in-Elevators/src/MessageQueue.cpp -o CMakeFiles/CppND-Conversations-in-Elevators.dir/src/MessageQueue.cpp.s
+
+CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Person.cpp.o: CMakeFiles/CppND-Conversations-in-Elevators.dir/flags.make
+CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Person.cpp.o: ../src/Person.cpp
+CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Person.cpp.o: CMakeFiles/CppND-Conversations-in-Elevators.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/julia/Documents/UdacityProjects/CppND-Conversations-in-Elevators/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Person.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Person.cpp.o -MF CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Person.cpp.o.d -o CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Person.cpp.o -c /home/julia/Documents/UdacityProjects/CppND-Conversations-in-Elevators/src/Person.cpp
+
+CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Person.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Person.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/julia/Documents/UdacityProjects/CppND-Conversations-in-Elevators/src/Person.cpp > CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Person.cpp.i
+
+CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Person.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Person.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/julia/Documents/UdacityProjects/CppND-Conversations-in-Elevators/src/Person.cpp -o CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Person.cpp.s
+
+CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Question.cpp.o: CMakeFiles/CppND-Conversations-in-Elevators.dir/flags.make
+CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Question.cpp.o: ../src/Question.cpp
+CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Question.cpp.o: CMakeFiles/CppND-Conversations-in-Elevators.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/julia/Documents/UdacityProjects/CppND-Conversations-in-Elevators/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Question.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Question.cpp.o -MF CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Question.cpp.o.d -o CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Question.cpp.o -c /home/julia/Documents/UdacityProjects/CppND-Conversations-in-Elevators/src/Question.cpp
+
+CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Question.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Question.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/julia/Documents/UdacityProjects/CppND-Conversations-in-Elevators/src/Question.cpp > CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Question.cpp.i
+
+CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Question.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Question.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/julia/Documents/UdacityProjects/CppND-Conversations-in-Elevators/src/Question.cpp -o CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Question.cpp.s
+
+CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Space.cpp.o: CMakeFiles/CppND-Conversations-in-Elevators.dir/flags.make
+CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Space.cpp.o: ../src/Space.cpp
+CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Space.cpp.o: CMakeFiles/CppND-Conversations-in-Elevators.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/julia/Documents/UdacityProjects/CppND-Conversations-in-Elevators/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Space.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Space.cpp.o -MF CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Space.cpp.o.d -o CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Space.cpp.o -c /home/julia/Documents/UdacityProjects/CppND-Conversations-in-Elevators/src/Space.cpp
+
+CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Space.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Space.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/julia/Documents/UdacityProjects/CppND-Conversations-in-Elevators/src/Space.cpp > CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Space.cpp.i
+
+CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Space.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Space.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/julia/Documents/UdacityProjects/CppND-Conversations-in-Elevators/src/Space.cpp -o CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Space.cpp.s
+
 CMakeFiles/CppND-Conversations-in-Elevators.dir/src/main.cpp.o: CMakeFiles/CppND-Conversations-in-Elevators.dir/flags.make
 CMakeFiles/CppND-Conversations-in-Elevators.dir/src/main.cpp.o: ../src/main.cpp
 CMakeFiles/CppND-Conversations-in-Elevators.dir/src/main.cpp.o: CMakeFiles/CppND-Conversations-in-Elevators.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/julia/Documents/UdacityProjects/CppND-Conversations-in-Elevators/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/CppND-Conversations-in-Elevators.dir/src/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/julia/Documents/UdacityProjects/CppND-Conversations-in-Elevators/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/CppND-Conversations-in-Elevators.dir/src/main.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CppND-Conversations-in-Elevators.dir/src/main.cpp.o -MF CMakeFiles/CppND-Conversations-in-Elevators.dir/src/main.cpp.o.d -o CMakeFiles/CppND-Conversations-in-Elevators.dir/src/main.cpp.o -c /home/julia/Documents/UdacityProjects/CppND-Conversations-in-Elevators/src/main.cpp
 
 CMakeFiles/CppND-Conversations-in-Elevators.dir/src/main.cpp.i: cmake_force
@@ -85,15 +225,35 @@ CMakeFiles/CppND-Conversations-in-Elevators.dir/src/main.cpp.s: cmake_force
 
 # Object files for target CppND-Conversations-in-Elevators
 CppND__Conversations__in__Elevators_OBJECTS = \
+"CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Answer.cpp.o" \
+"CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Building.cpp.o" \
+"CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Conversation.cpp.o" \
+"CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Dialog.cpp.o" \
+"CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Elevator.cpp.o" \
+"CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Floor.cpp.o" \
+"CMakeFiles/CppND-Conversations-in-Elevators.dir/src/MessageQueue.cpp.o" \
+"CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Person.cpp.o" \
+"CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Question.cpp.o" \
+"CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Space.cpp.o" \
 "CMakeFiles/CppND-Conversations-in-Elevators.dir/src/main.cpp.o"
 
 # External object files for target CppND-Conversations-in-Elevators
 CppND__Conversations__in__Elevators_EXTERNAL_OBJECTS =
 
+CppND-Conversations-in-Elevators: CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Answer.cpp.o
+CppND-Conversations-in-Elevators: CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Building.cpp.o
+CppND-Conversations-in-Elevators: CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Conversation.cpp.o
+CppND-Conversations-in-Elevators: CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Dialog.cpp.o
+CppND-Conversations-in-Elevators: CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Elevator.cpp.o
+CppND-Conversations-in-Elevators: CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Floor.cpp.o
+CppND-Conversations-in-Elevators: CMakeFiles/CppND-Conversations-in-Elevators.dir/src/MessageQueue.cpp.o
+CppND-Conversations-in-Elevators: CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Person.cpp.o
+CppND-Conversations-in-Elevators: CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Question.cpp.o
+CppND-Conversations-in-Elevators: CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Space.cpp.o
 CppND-Conversations-in-Elevators: CMakeFiles/CppND-Conversations-in-Elevators.dir/src/main.cpp.o
 CppND-Conversations-in-Elevators: CMakeFiles/CppND-Conversations-in-Elevators.dir/build.make
 CppND-Conversations-in-Elevators: CMakeFiles/CppND-Conversations-in-Elevators.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/julia/Documents/UdacityProjects/CppND-Conversations-in-Elevators/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable CppND-Conversations-in-Elevators"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/julia/Documents/UdacityProjects/CppND-Conversations-in-Elevators/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable CppND-Conversations-in-Elevators"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/CppND-Conversations-in-Elevators.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

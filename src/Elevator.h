@@ -7,11 +7,21 @@
 #include "Floor.h"
 #include <memory>
 
+class Floor;
 
-typedef enum Direction
+
+enum Direction
 {
     UP,
-    DOWN
+    DOWN,
+    IDLE
+};
+
+class ElevatorButton
+{
+private:
+Direction button = IDLE;
+
 };
 
 class Elevator : public Space
@@ -24,9 +34,9 @@ class Elevator : public Space
 
         bool _open = false;
 
-        Direction _direction = UP;
+        Direction _direction = Direction::UP;
 
-        void simulate();
+        
 
         //do not copy elevators or spaces
         Elevator& operator=(const Elevator& elevator_in);
@@ -55,7 +65,7 @@ class Elevator : public Space
             return SpaceType::ELEVATOR;
         } 
         
-
+        void simulate();
 
 };
 

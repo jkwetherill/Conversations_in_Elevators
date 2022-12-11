@@ -1,5 +1,15 @@
 #include "Answer.h"
+#include "Question.h"
 
+Answer::Answer()
+{
+
+}
+
+Answer::~Answer()
+{
+    
+}
 
 Answer::Answer(const std::string &speaker, Question &question)
 {

@@ -2,13 +2,18 @@
 #define ANSWER_H
 
 #include "Dialog.h"
-#include "Question.h"
 
+
+class Question;
+
+
+//class Dialog;
 
 class Answer : public Dialog
 {
 
     public:
+    Answer();
     Answer(const std::string& speaker, Question& question);
     ~Answer();
 

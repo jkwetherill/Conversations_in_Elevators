@@ -1,6 +1,21 @@
  #include "Dialog.h"
 
 
+Dialog::Dialog()
+{
+
+}
+
+Dialog::~Dialog()
+{
+  
+}
+
+Dialog::Dialog(std::string& speaker, unsigned int ID):_speaker(speaker), _ID(ID)
+{
+  
+}
+
 Dialog &Dialog::operator=(const Dialog &dialog)
 {
   if (this == &dialog)
@@ -75,7 +90,7 @@ void Dialog::record(std::string &FileName)
   }
   std::string log = _speaker + ": " + _sentence;
 
-  fprintf(fp, log.c_str());
+  fprintf(fp, "%s\n", log.c_str());
 
   fclose(fp);
 }

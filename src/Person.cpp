@@ -1,15 +1,17 @@
 #include "Person.h"
+#include "Space.h"
 #include <vector>
 #include <thread>
 #include <random>
 
 Person::Person()
 {
-    _ID = _IDCount++;
+    //_ID = _IDCount++;
     pSpace = nullptr;
 }
 
 
+/*
 Person::Person(std::string name, unsigned int destFloor, unsigned int curFloor, Building* pBuilding):_name(name), _destFloor(destFloor)
 {
     _ID = _IDCount++;
@@ -17,7 +19,7 @@ Person::Person(std::string name, unsigned int destFloor, unsigned int curFloor, 
     enterSpace(&pBuilding->Floors[curFloor]);
 
 }
-
+*/
 
 Person::~Person()
 {
@@ -106,6 +108,7 @@ unsigned int& Person::get_ID()
     return _ID;
 }
 
+
 void Person::enterSpace(Space* pNewSpace)
 {
     if (pSpace != nullptr)
@@ -128,6 +131,8 @@ void Person::enterSpace(Space* pNewSpace)
 
 void Person::talk()
 {
+
+    
     while (1)
     {
         //pause 3-8 seconds
@@ -147,13 +152,16 @@ void Person::talk()
         else
         {
             //ask a question
-            Question question(_name);
+            Question question; //(_name);
+            question.ask(_name);
             pSpace->conversation->questionQueue.send(std::move(question));
         }
 
 
     }
+    
 }
+
 
 
 void Person::travel()

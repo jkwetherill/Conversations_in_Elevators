@@ -2,9 +2,12 @@
 #include "Person.h"
 #include <fstream>
 #include <sstream>
+#include <thread>
+#include <future>
 
 Building::Building()
 {
+
 
     for (unsigned int i = 0; i < NFLOORS; i++)
     {
@@ -13,13 +16,36 @@ Building::Building()
 
     for (unsigned int i = 0; i < NELEVATORS; i++)
     {
-        std::unique_ptr<Elevator> elevator(new Elevator(i));
+        std::unique_ptr<Elevator> elevator(new Elevator(i, Floors));
         Floors[0].moveElevatorHere(std::move(elevator));
     }
+
+
 }
 
 Building::~Building()
 {
+
+}
+
+void Building::launchElevators()
+{
+    
+    //set the elevators in motion
+    std::future<void> elevatorFutures[NELEVATORS];
+
+    
+    for (unsigned int i = 0; i < NELEVATORS; i++)
+    {
+        // for now assumes the elevator is starting on the bottom floor, could be made more general
+        elevatorFutures[i] = std::async(&Elevator::simulate, Floors[0].elevators[i].get());
+    }
+
+    for (unsigned int i = 0; i < NELEVATORS; i++)
+    {
+        elevatorFutures[i].get();
+    }
+   
 }
 
 
@@ -67,4 +93,5 @@ bool readInPeople(const std::string& inputDir, std::string& errorMsg)
 
         //Person thisPerson
     }
+    return true;
 }

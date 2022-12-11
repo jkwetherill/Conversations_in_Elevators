@@ -1,12 +1,12 @@
 #ifndef PERSON_H
 #define PERSON_H
 
-#include "Space.h"
-#include "Building.h"
+//#include "Space.h"
 #include <string>
-
+class Question;
+class Answer;
+template <class T> class MessageQueue;
 class Space;
-class Building;
 
 class Person
 {
@@ -21,7 +21,7 @@ public:
     Space *pSpace;
 
     Person();
-    Person(std::string name, unsigned int destFloor, unsigned int curFloor, Building *pBuilding);
+    //Person(std::string name, unsigned int destFloor, unsigned int curFloor, Building *pBuilding);
 
     ~Person();
 
@@ -43,5 +43,7 @@ public:
 
     void travel();
 };
+
+//unsigned int Person::_IDCount = 0;
 
 #endif

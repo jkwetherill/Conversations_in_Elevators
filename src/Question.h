@@ -3,13 +3,17 @@
 
 #include "Dialog.h"
 
+//class Dialog;
+
 class Question : public Dialog
 {
   public:
-  Question(const std::string& speaker);
+  Question();
+  //Question(const std::string& speaker);
+  void ask(const std::string& speaker);
   ~Question();
 
-  private:
+  protected:
   void generateDialog();
 
 };

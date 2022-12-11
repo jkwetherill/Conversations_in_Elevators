@@ -2,21 +2,25 @@
 #ifndef FLOOR_H
 #define FLOOR_H
 
+
+#include <memory>
 #include "Constants.h"
+//#include "Space.h"
+#include "Elevator.h"
 #include "Space.h"
-#include "Building.h"
-#include "ElevatorButton.h"
+#include "Space.h"
 
 
+class Elevator;
 
 class Floor : public Space, public std::enable_shared_from_this<Floor>
 {
-private:
+public:
 
-    bool _upButtons[NELEVATORS];
-    bool _downButtons[NELEVATORS];
+    bool upButtons[NELEVATORS];
+    bool downButtons[NELEVATORS];
 
-    std::unique_ptr<Elevator> _elevators[NELEVATORS];
+    std::unique_ptr<Elevator> elevators[NELEVATORS];
 
 
 
@@ -29,7 +33,7 @@ public:
         return shared_from_this();
     }
 
-    void Floor::moveElevatorHere(std::unique_ptr<Elevator>&& pElevator);
+    void moveElevatorHere(std::unique_ptr<Elevator>&& pElevator);
 
     void pressUpButton(unsigned int shaft_idx);
     void pressDownButton(unsigned int shaft_idx);
