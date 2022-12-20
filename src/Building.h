@@ -17,9 +17,10 @@ public:
     Building();
     ~Building();
 
-    Floor Floors[NFLOORS];
+    std::shared_ptr<Floor> Floors[NFLOORS];
+    //Floor Floors[NFLOORS];
 
-    bool readInPeople(const std::string& inputDir, std::string& errorMsg);
+    bool readInPeople(const std::string& inputDir, std::string& errorMsg, std::vector<std::future<void>>& talkingFutures);
 
     void launchElevators();
 };

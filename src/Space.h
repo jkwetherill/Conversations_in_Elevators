@@ -20,7 +20,9 @@ class Space
 public:
     unsigned int level;
     std::unique_ptr<Conversation> conversation;
-    std::vector<Person> people;
+    //std::vector<Person> people;
+    std::vector<std::unique_ptr<Person>> people;
+
 
 public:
     Space();

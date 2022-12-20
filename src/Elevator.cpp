@@ -1,6 +1,7 @@
 #include "Elevator.h"
 #include <random>
 #include <thread>
+#include <iostream>
 
 Elevator::Elevator()
 {
@@ -9,11 +10,11 @@ Elevator::~Elevator()
 {
 }
 
-Elevator::Elevator(unsigned int shaftIdxIn, Floor* floors):shaftIdx(shaftIdxIn)
+Elevator::Elevator(unsigned int shaftIdxIn, std::shared_ptr<Floor>* floors):shaftIdx(shaftIdxIn)
 {
     for (unsigned int i = 0; i < NFLOORS; i++)
     {
-        _floors[i] = (*(floors+i)).get_shared_this();
+        _floors[i] = floors[i]->get_shared_this();
     }
 }
 
@@ -78,13 +79,18 @@ void Elevator::setFloor(Floor *floors)
     }
 }
 
+/*
 void Elevator::setLevel(unsigned int level_in)
 {
     level = level_in;
 }
+*/
 
 void Elevator::simulate()
 {
+
+    std::cout << "Elevator # " << this->shaftIdx << " is launched.\n";
+
     // pause 20-30 seconds
     std::random_device rd;
     std::mt19937 eng(rd());
@@ -125,6 +131,9 @@ void Elevator::simulate()
             break;
         }
         }
+
+
+        std::cout << "Elevator # " << this->shaftIdx << " moving to floor " << nextFloorIdx << " \n";
 
         pNextFloor->moveElevatorHere(std::move(_floors[level]->elevators[this->shaftIdx]));
 

@@ -43,7 +43,7 @@ class Elevator : public Space
         Elevator(const Elevator& elevator_in);
 
     public:
-        Elevator(unsigned int shaftIdx, Floor* floors);
+        Elevator(unsigned int shaftIdx, std::shared_ptr<Floor>*);
         Elevator();
         ~Elevator();
 
@@ -57,7 +57,7 @@ class Elevator : public Space
 
         unsigned int shaftIdx;
 
-        void setLevel(unsigned int level);
+        //void setLevel(unsigned int level);
         void setFloor(Floor* floor);
 
         SpaceType spaceType()

@@ -7,6 +7,7 @@ class Question;
 class Answer;
 template <class T> class MessageQueue;
 class Space;
+class Building;
 
 class Person
 {
@@ -21,7 +22,7 @@ public:
     Space *pSpace;
 
     Person();
-    //Person(std::string name, unsigned int destFloor, unsigned int curFloor, Building *pBuilding);
+    Person(std::string name, unsigned int destFloor, unsigned int curFloor, Building *pBuilding);
 
     ~Person();
 

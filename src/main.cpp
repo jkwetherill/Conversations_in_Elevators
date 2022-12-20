@@ -24,9 +24,11 @@ int main(int argc, char *argv[])
     */
 
     
-   Building building;
+   Building* building = new Building();
 
-   //.launchElevators();
+   //building->launchElevators();
+   
+   delete building;
 
    //Elevator e;
 

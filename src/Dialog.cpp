@@ -1,4 +1,5 @@
  #include "Dialog.h"
+ #include <iostream>
 
 
 Dialog::Dialog()
@@ -83,6 +84,8 @@ const Question_Type &Dialog::getQuestionType()
 
 void Dialog::record(std::string &FileName)
 {
+  std::cout << _speaker << " : " << _sentence << "\n";
+
   FILE *fp = fopen(FileName.c_str(), "a");
   if (!fp)
   {

@@ -1,5 +1,6 @@
 #include "Space.h"
 #include "Person.h"
+#include <iostream>
 
 Space::Space()
 {

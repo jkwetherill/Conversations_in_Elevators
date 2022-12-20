@@ -1,25 +1,30 @@
 #include "Person.h"
 #include "Space.h"
+#include "Building.h"
 #include <vector>
 #include <thread>
 #include <random>
+#include <iostream>
+
+unsigned int Person::_IDCount = 0;
 
 Person::Person()
 {
-    //_ID = _IDCount++;
+    _ID = _IDCount++;
     pSpace = nullptr;
 }
 
 
-/*
+
 Person::Person(std::string name, unsigned int destFloor, unsigned int curFloor, Building* pBuilding):_name(name), _destFloor(destFloor)
 {
     _ID = _IDCount++;
+    //future.get();
     
-    enterSpace(&pBuilding->Floors[curFloor]);
-
+    std::cout << "Entering space\n";
+    enterSpace(pBuilding->Floors[curFloor].get());
 }
-*/
+
 
 Person::~Person()
 {
@@ -111,13 +116,17 @@ unsigned int& Person::get_ID()
 
 void Person::enterSpace(Space* pNewSpace)
 {
+    bool inAnotherSpace = false;
+    std::unique_ptr<Person> this_person;
     if (pSpace != nullptr)
     {
-        for (std::vector<Person>::iterator it = pSpace->people.begin(); it != pSpace->people.end(); it++)
+        for (std::vector<std::unique_ptr<Person>>::iterator it = pSpace->people.begin(); it != pSpace->people.end(); it++)
         {
-            if ((*it).get_ID() == _ID)
+            if ((*it)->get_ID() == _ID)
             {
+                this_person = std::move(*it);
                 pSpace->people.erase(it);
+                inAnotherSpace = true;
                 break;
             }
         }
@@ -125,7 +134,12 @@ void Person::enterSpace(Space* pNewSpace)
 
     pSpace = pNewSpace;
 
-    pSpace->people.emplace_back(std::move(*this));
+    if (!inAnotherSpace)
+    {
+        this_person.reset(this);
+    }
+
+    pSpace->people.emplace_back(std::move(this_person));
 }
 
 
@@ -142,15 +156,23 @@ void Person::talk()
         
         std::this_thread::sleep_for(std::chrono::milliseconds(distr(eng)));
 
+        std::cout << "Getting open questions\n";
+        if (pSpace == nullptr)
+        {
+            continue;
+        }
+
         auto openQuestions = pSpace->conversation->openQuestions;
         if (openQuestions.size() > 0)
         {
+            std::cout << "Answering\n";
             //answer 1st question
             Answer answer(_name, openQuestions[0]);
             pSpace->conversation->answerQueue.send(std::move(answer));
         }
         else
         {
+            std::cout << "Asking\n";
             //ask a question
             Question question; //(_name);
             question.ask(_name);

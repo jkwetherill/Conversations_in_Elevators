@@ -5,6 +5,7 @@
 #include <thread>
 #include <future>
 #include <vector>
+#include <iostream>
 
 
 Conversation::Conversation()
@@ -26,17 +27,13 @@ void Conversation::run()
 {
     std::future<void> fQ = std::async(std::launch::async, &Conversation::receiveQuestions, this);
     std::future<void> fA = std::async(std::launch::async, &Conversation::receiveAnswers, this);
-
- 
-
-    fQ.get();
-    fA.get();
+    //fQ.get();
+    //fA.get();
 }
 
 
 void Conversation::receiveQuestions()
 {
-    
     while (1)
     {
         Question newQuestion = questionQueue.receive(); //wait for somebody to ask a question
@@ -50,8 +47,6 @@ void Conversation::receiveQuestions()
 
 void Conversation::receiveAnswers()
 {
-    
-
     while (1)
     {
         Answer newAnswer = answerQueue.receive(); // wait for somebody to provide an answer
