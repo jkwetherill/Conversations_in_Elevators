@@ -1,4 +1,5 @@
 #include "Floor.h"
+#include "Building.h"
 #include <iostream>
 
 Floor::Floor()
@@ -13,14 +14,14 @@ Floor::~Floor()
 
 void Floor::moveElevatorHere(std::unique_ptr<Elevator>&& pElevator)
 {
+    std::unique_lock<std::mutex> lock(pBuilding->ElevatorMutexes[pElevator->shaftIdx]);
     unsigned int shaftIdx = pElevator->shaftIdx;
-    //std::cout << "pElevator is : " << pElevator.get() << "\n";
-    //std::cout << "Move assignment of elevator\n";
     elevators[shaftIdx] = std::move(pElevator);
-    //std::cout << "member elevator is : " << elevators[shaftIdx].get() << "\n";
-    //std::cout << "Setting level of elevator\n";
-    //std::cout << "Floor level is: " << this->level << "\n";
-    elevators[shaftIdx]->setLevel(this->level);
+    elevators[shaftIdx]->setLevel(level);
+
+    // allow people to enter & exit
+    elevators[shaftIdx]->messageQueue->send(std::move(level));
+
 }
 
 void Floor::pressUpButton(unsigned int shaft_idx)

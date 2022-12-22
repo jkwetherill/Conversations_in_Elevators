@@ -19,10 +19,11 @@ Person::Person()
 Person::Person(std::string name, unsigned int destFloor, unsigned int curFloor, Building* pBuilding):_name(name), _destFloor(destFloor)
 {
     _ID = _IDCount++;
-    //future.get();
     
-    std::cout << "Entering space\n";
+    _destFloor = destFloor;
+    
     enterSpace(pBuilding->Floors[curFloor].get());
+
 }
 
 
@@ -45,6 +46,7 @@ public:
 
 Person& Person::operator=(const Person& person)
 {
+    std::cout << "Copy Person (not good)\n";
    if (this == &person) 
    {
     return *this;
@@ -59,6 +61,7 @@ Person& Person::operator=(const Person& person)
 }
 Person& Person::operator=(Person&& person)
 {
+   std::cout << "move person\n";
    if (this == &person) 
    {
     return *this;
@@ -76,6 +79,8 @@ Person& Person::operator=(Person&& person)
 Person::Person(const Person& person)
 {
 
+    std::cout << "Person copy constructor\n";
+
     _name = person._name;
     _ID = person._ID;
     _destFloor = person._destFloor;
@@ -86,6 +91,7 @@ Person::Person(const Person& person)
 Person::Person(Person&& person)
 {
 
+    std::cout << "Person move constructor\n";
 
     _name = person._name;
     _ID = person._ID;
@@ -113,23 +119,48 @@ unsigned int& Person::get_ID()
     return _ID;
 }
 
-
-void Person::enterSpace(Space* pNewSpace)
+void Person::enterSpace(Space *pNewSpace)
 {
+
+    Elevator* pElevator;
+    unsigned int shaft_idx;
+    if (pNewSpace->spaceType() == SpaceType::ELEVATOR)
+    {
+        // if the new space is an elevator, pause the elevator and let in only one person at a time
+        pElevator = static_cast<Elevator*>(pNewSpace);
+        shaft_idx = pElevator->shaftIdx;
+
+        
+    }
+    else if (pSpace != nullptr && pSpace->spaceType() == SpaceType::ELEVATOR)
+    {
+        pElevator = static_cast<Elevator*>(pSpace);
+        shaft_idx = pElevator->shaftIdx;
+    }
+    else
+    {
+        shaft_idx = 0;   
+    }
+    std::mutex& m = pNewSpace->pBuilding->ElevatorMutexes[shaft_idx];
+    std::unique_lock<std::mutex> lock(m);
+
+ 
+
+
     bool inAnotherSpace = false;
     std::unique_ptr<Person> this_person;
     if (pSpace != nullptr)
     {
-        for (std::vector<std::unique_ptr<Person>>::iterator it = pSpace->people.begin(); it != pSpace->people.end(); it++)
+    for (std::vector<std::unique_ptr<Person>>::iterator it = pSpace->people.begin(); it != pSpace->people.end(); it++)
+    {
+        if ((*it)->get_ID() == _ID)
         {
-            if ((*it)->get_ID() == _ID)
-            {
-                this_person = std::move(*it);
-                pSpace->people.erase(it);
-                inAnotherSpace = true;
-                break;
-            }
+            this_person = std::move(*it);
+            pSpace->people.erase(it);
+            inAnotherSpace = true;
+            break;
         }
+    }
     }
 
     pSpace = pNewSpace;
@@ -140,65 +171,125 @@ void Person::enterSpace(Space* pNewSpace)
     }
 
     pSpace->people.emplace_back(std::move(this_person));
-}
 
+    switch (pSpace->spaceType())
+    {
+        case SpaceType::ELEVATOR:
+        {
+            Elevator* pElevator = static_cast<Elevator*>(pSpace);
+            std::cout << _name << " enters elevator # " << pElevator->shaftIdx << "\n";
+            break;
+        }
+        case SpaceType::FLOOR:
+        {
+            Floor* pFloor = static_cast<Floor*>(pSpace);
+            std::cout << _name << " enters floor # " << pFloor->level << "\n";
+            break;
+        }
+    }
+
+}
 
 void Person::talk()
 {
-
-    
     while (1)
     {
-        //pause 3-8 seconds
-        std::random_device rd;
-        std::mt19937 eng(rd());
-        std::uniform_int_distribution<> distr(3000, 8000);
-        
-        std::this_thread::sleep_for(std::chrono::milliseconds(distr(eng)));
+    // pause 3-15 seconds
+    std::random_device rd;
+    std::mt19937 eng(rd());
+    std::uniform_int_distribution<> distr(3000, 15000);
 
-        std::cout << "Getting open questions\n";
-        if (pSpace == nullptr)
-        {
-            continue;
-        }
+    std::this_thread::sleep_for(std::chrono::milliseconds(distr(eng)));
 
-        auto openQuestions = pSpace->conversation->openQuestions;
-        if (openQuestions.size() > 0)
-        {
-            std::cout << "Answering\n";
-            //answer 1st question
-            Answer answer(_name, openQuestions[0]);
-            pSpace->conversation->answerQueue.send(std::move(answer));
-        }
-        else
-        {
-            std::cout << "Asking\n";
-            //ask a question
-            Question question; //(_name);
-            question.ask(_name);
-            pSpace->conversation->questionQueue.send(std::move(question));
-        }
-
-
+    if (pSpace == nullptr)
+    {
+        continue;
     }
-    
+    else if (pSpace->spaceType() == SpaceType::FLOOR && pSpace->level == _destFloor)
+    {
+        continue; // don't talk at the destination floor
+    }
+
+    std::unique_ptr<Conversation> &convo = pSpace->conversation;
+    std::vector<Question>& openQuestions = convo->openQuestions;
+
+    if (openQuestions.size() > 0)
+    {
+        // answer 1st question
+        Answer answer(_name, openQuestions[0]);
+        pSpace->conversation->answerQueue.send(std::move(answer));
+    }
+    else
+    {
+        // ask a question
+        Question question(_name);
+        pSpace->conversation->questionQueue.send(std::move(question));
+    }
+    }
 }
-
-
 
 void Person::travel()
 {
-    while (_destFloor != pSpace->level && pSpace->spaceType() != FLOOR)
+
+    std::random_device rd;
+    std::mt19937 eng(rd());
+    std::uniform_int_distribution<> distr(0, NELEVATORS-1);
+    
+
+    while ((_destFloor != pSpace->level) || (pSpace->spaceType() != SpaceType::FLOOR))
     {
         switch (pSpace->spaceType())
         {
             case SpaceType::FLOOR:
             {
+
                 
+                Floor* thisFloor = static_cast<Floor*> (pSpace);
+
+                // choose a random elevator index
+                unsigned int shaft_idx = distr(eng);
+
+                if (_destFloor > pSpace->level)
+                {
+                    thisFloor->upButtons[shaft_idx] = true; 
+                }
+                else if (_destFloor < pSpace->level)
+                {
+                    thisFloor->downButtons[shaft_idx] = true;
+                }
+
+                
+
+                // wait for elevator to reach this floor
+                while (thisFloor->elevators[shaft_idx].get() == nullptr)
+                {
+
+                }
+
+            
+                // enter elevator
+                enterSpace(thisFloor->elevators[shaft_idx].get());
+
+                
+
+
+
                 break;
             }
             case SpaceType::ELEVATOR:
             {
+                Elevator* thisElevator = static_cast<Elevator*>(pSpace);
+                thisElevator->buttons[_destFloor] = true;
+
+                // wait for elevator to arrive on destination floor
+                while (thisElevator->messageQueue->receive() != _destFloor)
+                {
+
+                }
+
+                // enter elevator
+                enterSpace(thisElevator->pBuilding->Floors[thisElevator->level].get());
+
                 break;
             }
             default:

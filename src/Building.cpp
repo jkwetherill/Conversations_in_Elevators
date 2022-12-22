@@ -9,37 +9,29 @@
 Building::Building()
 {
 
-    //std::cout << "Building Constructor\n";
-
     std::future<void> fFloorConv[NFLOORS];
     for (unsigned int i = 0; i < NFLOORS; i++)
     {
         Floors[i].reset(new Floor());
         Floors[i]->setLevel(i);
-        std::cout << "Floor " << i << " conversation running\n";
+        Floors[i]->pBuilding = this;
         fFloorConv[i] = std::async(&Conversation::run, Floors[i]->conversation.get());
-
-        //std::cout << "Floor # " << i << " " << &(Floors[i]) << "\n";
     }
 
 
     std::future<void> fElevatorConv[NELEVATORS];
     for (unsigned int i = 0; i < NELEVATORS; i++)
     {
-        //std::cout << "Creating new elevator\n";
-        Elevator* pElevator = new Elevator(i, Floors);
-        //std::cout << "Passing new elevator to unique pointer \n";
-        std::unique_ptr<Elevator> elevator(pElevator);
-        std::cout << "Elevator " << i << " conversation running\n";
+        std::unique_ptr<Elevator> elevator(new Elevator(i, Floors));
+        elevator->pBuilding = this;
         fElevatorConv[i] = std::async(&Conversation::run, elevator->conversation.get());
-
-        //std::cout << "Moving elevator to floor 0\n";
         Floors[0]->moveElevatorHere(std::move(elevator));
     }
 
     std::string errorMsg;
     std::vector<std::future<void>> talkingFutures;
-    bool e = readInPeople(".//..", errorMsg, talkingFutures);
+    std::vector<std::future<void>> travelingFutures;
+    bool e = readInPeople(".//..", errorMsg, talkingFutures, travelingFutures);
     if (e)
     {
         std::cout << "Successfully read people.\n";
@@ -78,7 +70,7 @@ void Building::launchElevators()
 }
 
 
-bool Building::readInPeople(const std::string& inputDir, std::string& errorMsg, std::vector<std::future<void>>& talkingFutures)
+bool Building::readInPeople(const std::string& inputDir, std::string& errorMsg, std::vector<std::future<void>>& talkingFutures, std::vector<std::future<void>>& travelingFutures)
 {
     const std::string FileName = inputDir + "/People.txt";
 
@@ -121,9 +113,12 @@ bool Building::readInPeople(const std::string& inputDir, std::string& errorMsg, 
             return false;
         }
 
-        Person person(name, dest_floor, start_floor, this);
+        // handle will be assigned to a unique pointer in the constructor
+        Person* pPerson = new Person(name, dest_floor, start_floor, this);
             
-        talkingFutures.emplace_back(std::async(&Person::talk, &person));
+        talkingFutures.emplace_back(std::async(&Person::talk, pPerson));
+
+        travelingFutures.emplace_back(std::async(&Person::travel, pPerson));
     }
     return true;
 }

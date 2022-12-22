@@ -18,9 +18,9 @@ public:
     ~Building();
 
     std::shared_ptr<Floor> Floors[NFLOORS];
-    //Floor Floors[NFLOORS];
+    std::mutex ElevatorMutexes[NELEVATORS];
 
-    bool readInPeople(const std::string& inputDir, std::string& errorMsg, std::vector<std::future<void>>& talkingFutures);
+    bool readInPeople(const std::string& inputDir, std::string& errorMsg, std::vector<std::future<void>>& talkingFutures, std::vector<std::future<void>>& travelingFutures);
 
     void launchElevators();
 };

@@ -1,3 +1,5 @@
+// This class was copied from Udacity Nanodegree Project # 4: Traffic Simulation
+
 #ifndef MESSAGEQUEUE_H
 #define MESSAGEQUEUE_H
 

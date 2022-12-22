@@ -3,6 +3,8 @@
 
 //#include "Space.h"
 #include <string>
+#include "MessageQueue.h"
+
 class Question;
 class Answer;
 template <class T> class MessageQueue;
@@ -31,6 +33,7 @@ public:
     Person(const Person &person);
     Person(Person &&person);
 
+    MessageQueue<unsigned int> messageQueue;
     std::string &get_name();
     void set_name(const std::string &name);
 

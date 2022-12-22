@@ -8,6 +8,14 @@ Question::Question()
 
 }
 
+Question::Question(const std::string& speaker)
+{
+  _speaker = speaker;
+  generateDialog();
+}
+
+
+/*
 void Question::ask(const std::string &speaker)
 {
   _speaker = speaker;
@@ -15,7 +23,7 @@ void Question::ask(const std::string &speaker)
 
   generateDialog();
 }
-
+*/
 
 Question::~Question()
 {
@@ -60,7 +68,7 @@ void Question::generateDialog()
   else if (nQT == 5)
   {
     _questionType = WHETHER;
-    _sentence = "Do you like it?";
+    _sentence = "Is it true?";
   }
   else
   {

@@ -4,7 +4,7 @@
 
 Space::Space()
 {
-    conversation.reset(new Conversation);
+    conversation.reset(new Conversation());
 }
 
 Space::~Space()
@@ -20,6 +20,7 @@ Space::Space(const std::string& logFile)
 
 Space::Space(Space &&Space_in) // move constructor
 {
+    std::cout << "Moving space\n";
     conversation = std::move(Space_in.conversation);
     people = std::move(people);
     level = Space_in.level;
@@ -29,6 +30,7 @@ Space::Space(Space &&Space_in) // move constructor
 Space &Space::operator=(Space &&Space_in) // move assignment
 {
 
+    std::cout << "Space Move Assignment " << &Space_in << " " << this << "\n";
     if (&Space_in == this)
     {
         return *this;

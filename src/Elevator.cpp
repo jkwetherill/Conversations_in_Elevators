@@ -12,6 +12,7 @@ Elevator::~Elevator()
 
 Elevator::Elevator(unsigned int shaftIdxIn, std::shared_ptr<Floor>* floors):shaftIdx(shaftIdxIn)
 {
+    messageQueue.reset(new MessageQueue<unsigned int>);
     for (unsigned int i = 0; i < NFLOORS; i++)
     {
         _floors[i] = floors[i]->get_shared_this();
@@ -23,7 +24,7 @@ Elevator::Elevator(Elevator &&elevator_in) // move constructor
 {
     for (unsigned int i = 0; i < NFLOORS; i++)
     {
-        _buttons[i] = elevator_in._buttons[i];
+        buttons[i] = elevator_in.buttons[i];
     }
 
     _open = elevator_in._open;
@@ -34,8 +35,11 @@ Elevator::Elevator(Elevator &&elevator_in) // move constructor
 
     for (unsigned int i = 0; i < NFLOORS; i++)
     {
-        _floors[i] = std::move(elevator_in._floors[i]);
+        //_floors[i] = std::move(elevator_in._floors[i]);
+        _floors[i] = elevator_in._floors[i];
     }
+
+    messageQueue = std::move(elevator_in.messageQueue);
 
 }
 
@@ -49,7 +53,7 @@ Elevator &Elevator::operator=(Elevator &&elevator_in)  // move assignment
 
     for (unsigned int i = 0; i < NFLOORS; i++)
     {
-        _buttons[i] = elevator_in._buttons[i];
+        buttons[i] = elevator_in.buttons[i];
     }
 
     _open = elevator_in._open;
@@ -62,6 +66,8 @@ Elevator &Elevator::operator=(Elevator &&elevator_in)  // move assignment
     {
         _floors[i] = std::move(elevator_in._floors[i]);
     }
+
+    messageQueue = std::move(elevator_in.messageQueue);
 
     return *this;
 }
@@ -146,9 +152,9 @@ void Elevator::simulate()
             _direction = UP;
         }
 
-        if (_buttons[nextFloorIdx])
+        if (buttons[nextFloorIdx])
         {
-            _buttons[nextFloorIdx] = false; // release button
+            buttons[nextFloorIdx] = false; // release button
         }
         if (_direction == UP && pNextFloor->upButtons[this->shaftIdx])
         {

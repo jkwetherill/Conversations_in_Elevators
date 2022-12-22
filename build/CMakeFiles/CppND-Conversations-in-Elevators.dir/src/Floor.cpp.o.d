@@ -174,9 +174,10 @@ CMakeFiles/CppND-Conversations-in-Elevators.dir/src/Floor.cpp.o: \
  /usr/include/c++/11/condition_variable /usr/include/c++/11/future \
  /usr/include/c++/11/atomic /usr/include/c++/11/bits/atomic_futex.h \
  /usr/include/c++/11/bits/std_function.h \
- /usr/include/c++/11/bits/std_thread.h /usr/include/c++/11/iostream \
- /usr/include/c++/11/ostream /usr/include/c++/11/ios \
- /usr/include/c++/11/bits/ios_base.h \
+ /usr/include/c++/11/bits/std_thread.h \
+ /home/julia/Documents/UdacityProjects/CppND-Conversations-in-Elevators/src/Building.h \
+ /usr/include/c++/11/iostream /usr/include/c++/11/ostream \
+ /usr/include/c++/11/ios /usr/include/c++/11/bits/ios_base.h \
  /usr/include/c++/11/bits/locale_classes.h \
  /usr/include/c++/11/bits/locale_classes.tcc \
  /usr/include/c++/11/streambuf /usr/include/c++/11/bits/streambuf.tcc \

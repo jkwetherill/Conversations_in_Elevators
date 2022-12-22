@@ -18,6 +18,8 @@ Answer::Answer(const std::string &speaker, Question &question)
     _questionType = question.getQuestionType();
 
     generateDialog();
+
+    _sentence = question.getSpeaker() + ", " + _sentence;
 }
 
 void Answer::generateDialog()

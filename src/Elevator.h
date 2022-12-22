@@ -6,6 +6,7 @@
 #include <string>
 #include "Floor.h"
 #include <memory>
+#include "MessageQueue.h"
 
 class Floor;
 
@@ -28,7 +29,7 @@ class Elevator : public Space
 {
     private:
 
-        bool _buttons[NFLOORS];
+        
 
         std::shared_ptr<Floor> _floors[NFLOORS];
 
@@ -46,18 +47,17 @@ class Elevator : public Space
         Elevator(unsigned int shaftIdx, std::shared_ptr<Floor>*);
         Elevator();
         ~Elevator();
-
-        //assignment operator
-        
-        
         Elevator(Elevator&& elevator_in);
         Elevator& operator=(Elevator&& elevator_in);
+
+        std::unique_ptr<MessageQueue<unsigned int>> messageQueue;
 
         bool isOpen();
 
         unsigned int shaftIdx;
 
-        //void setLevel(unsigned int level);
+        bool buttons[NFLOORS];
+
         void setFloor(Floor* floor);
 
         SpaceType spaceType()

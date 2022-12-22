@@ -9,7 +9,7 @@ class Question : public Dialog
 {
   public:
   Question();
-  //Question(const std::string& speaker);
+  Question(const std::string& speaker);
   void ask(const std::string& speaker);
   ~Question();
 

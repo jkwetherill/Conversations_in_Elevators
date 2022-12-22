@@ -1,1 +1,6 @@
-Person0 1 9
+Bob 1 9
+Katie 1 7
+Alice 2 3
+Julie 1 7
+Kelly 9 5
+Kristen 1 5
